@@ -1,17 +1,18 @@
 /*
 	ENUNCIADO 
-	FaÁa o programa que apresenta a seguinte saÌda, perguntando ao usu·rio o n˙mero m·ximo (no exemplo, 9).
-	Este n˙mero deve ser sempre Ìmpar.
+	Fa√ßa o programa que apresenta a seguinte sa√≠da, perguntando ao usu√°rio o n√∫mero m√°ximo (no exemplo, 9).
+	Este n√∫mero deve ser sempre √≠mpar.
 	
-											1 2 3 4 5 6 7 8 9
-											 2 3 4 5 6 7 8
-											  3 4 5 6 7
-											   4 5 6
-											     5   
+						1 2 3 4 5 6 7 8 9
+						  2 3 4 5 6 7 8
+						    3 4 5 6 7
+						      4 5 6
+							5   
+			
 	AUTOR: RODRIGO BARBOZA
 	DATA: 22/04/2020
 	
-	***** para fins de estudo/ revis„o *****
+	***** para fins de estudo/ revis√£o *****
 
 */
 int main (int argc, char **argv){
@@ -21,30 +22,30 @@ int main (int argc, char **argv){
 	do{
 		cout << "digite um numero impar: ";
 		cin >> max;
-	// se o resto da divis„o for igual a 0, significa que È um numero par, ent„o nega-se
-	// a express„o para que ela se torne verdadeira e sendo assim solicite um numero novamente
-	// atÈ que a condiÁ„o seja satisfeita (resto da funÁao igual a qualquer n˙mero)
+	// se o resto da divis√£o for igual a 0, significa que √© um numero par, ent√£o nega-se
+	// a express√£o para que ela se torne verdadeira e sendo assim solicite um numero novamente
+	// at√© que a condi√ß√£o seja satisfeita (resto da fun√ßao igual a qualquer n√∫mero)
 	} while (!(max%2));	
 	
-	// imprime de 1 atÈ o numero maximo para a primeira linha
+	// imprime de 1 at√© o numero maximo para a primeira linha
 	for (int c=1; c!=max+1; c++){
 		cout << " " << c;
 	}
 	
 	// verifica se a!= do numero maximo-b
-	// se repete atÈ que a == b, no exemplo isso acontece quando a=b=5
+	// se repete at√© que a == b, no exemplo isso acontece quando a=b=5
 	while (a!=max-b){
 		// incremento a e b e pulo uma linha
 		a++; b++; cout << "\n";
-		// faÁo a verificaÁ„o na mesma sequencia de 1 atÈ o max
+		// fa√ßo a verifica√ß√£o na mesma sequencia de 1 at√© o max
 		for (int c=1; c!=max+1; c++){
-			// verifico se c est· no intervalo correto, se n„o estiver eu preencho com um espaÁo
+			// verifico se c est√° no intervalo correto, se n√£o estiver eu preencho com um espa√ßo
 			// ex: se c = 1, a = 2, max-b = 9
-			// c < a = 1 || c > max-b = 0 ent„o ele vai preencher um espaÁo
+			// c < a = 1 || c > max-b = 0 ent√£o ele vai preencher um espa√ßo
 			// ex: se c = 2, a = 3, max-b = 8
 			if (c < a || c > max-b){
 				cout << "  ";
-			// se estiver eu preencho com o n˙mero
+			// se estiver eu preencho com o n√∫mero
 			} else cout << " " << c;
 		}
 	} 
