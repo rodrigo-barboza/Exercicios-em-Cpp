@@ -1,42 +1,42 @@
 /*
 	ENUNCIADO
-	Escreva um programa que leia 3 notas de um aluno e a mÈdia das notas dos exercÌcios realizados por ele. 
-	Calcular a mÈdia de aproveitamento, usando a fÛrmula: MA = (N1 + N2*2 + N3*3 + ME)/7. A partir da mÈdia,
+	Escreva um programa que leia 3 notas de um aluno e a m√©dia das notas dos exerc√≠cios realizados por ele. 
+	Calcular a m√©dia de aproveitamento, usando a f√≥rmula: MA = (N1 + N2*2 + N3*3 + ME)/7. A partir da m√©dia,
 	informar o conceito de acordo com a tabela:
 
 		+=================================================+
-		+	maior ou igual a 9	A						  +
-		+	maior ou igual a 7.5 e menor que 9	B         +
-		+	maior ou igual a 6 e menor que 7.5	C         +
-		+	maior ou igual a 4 e menor que 6	D         +
-		+	menor que 4	E								  +
+		+    maior ou igual a 9	                      A	  +
+		+    maior ou igual a 7.5 e menor que 9       B   +
+		+    maior ou igual a 6 e menor que 7.5       C   +
+		+    maior ou igual a 4 e menor que 6         D   +
+		+    menor que 4			      E	  +
 		+=================================================+
 
-	OBS: ser· resolvido com o conceito de OO
+	OBS: ser√° resolvido com o conceito de OO
 	
 	AUTOR: RODRIGO BARBOZA
 	DATA: 21/04/2020
 	
-	***** para fins de estudo/ revis„o *****
+	***** para fins de estudo/ revis√£o *****
 */
 
 #include <iostream>
 
 using namespace std;
 
-// criaÁ„o da classe notas
+// cria√ß√£o da classe notas
 class Notas{
 	// recebe duas variaveis privadas
 	private:
 		float nota[3];
 		float media;
-	// funÁıes e construtor da classe
+	// fun√ß√µes e construtor da classe
 	public:
 		// construtor
 		Notas (){
 			for (int c=0; c<3; c++)
 				nota[c] = 0.00;
-			media = 0.00;
+				media = 0.00;
 		}
 		
 		// adiciona as notas
@@ -64,11 +64,11 @@ class Notas{
 };
 
 int main (int argc, char **argv){
-	// aluno È um novo objeto da classe Notas
+	// aluno √© um novo objeto da classe Notas
 	Notas aluno;
 	// vetor para receber as notas
 	float *notas;
-	// alocar espaÁo na memÛria para o vetor notas com 3 posiÁıes
+	// alocar espa√ßo na mem√≥ria para o vetor notas com 3 posi√ß√µes
 	notas = new float[3];
 	// ler notas para o vetor notas
 	for (int c=0; c<3; c++){
@@ -78,7 +78,7 @@ int main (int argc, char **argv){
 	}
 	
 	/*
-		// imprime as notas que foram mandadas, mas o enunciado n„o pede
+		// imprime as notas que foram mandadas, mas o enunciado n√£o pede
 		for (int c=0; c<3;c++){
 			cout << aluno.getNota(c, *notas) << endl;
 		}
@@ -86,7 +86,7 @@ int main (int argc, char **argv){
 	
 	// atribui a variavel nota a media de aproveitamento do aluno
 	float nota = aluno.getMedia();
-	// faz as verificaÁıes da tabela para retornar a media de aproveitamento do aluno
+	// faz as verifica√ß√µes da tabela para retornar a media de aproveitamento do aluno
 	if (nota >= 9)
 		cout << "Sua media de aproveitamento e A!" << endl;
 	else if (nota >= 7.5 && nota < 9)
@@ -96,7 +96,7 @@ int main (int argc, char **argv){
 	else if (nota < 6 && nota >= 4)
 		cout << "Sua media de aproveitamento e D." << endl;
 	else cout << "Sua media de aproveitamento e E." << endl;
-	// libera espaÁo alocado para o vetor de notas
+	// libera espa√ßo alocado para o vetor de notas
 	delete[] notas;
 	return 0;
 }
