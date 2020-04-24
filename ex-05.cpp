@@ -30,6 +30,8 @@ int main (int argc, char **argv){
 	multLinha (matriz, 3, 2, num);
 	// chama a função que multiplica a soma de todas as colunas por num
 	multColuna (matriz, 3, 2, num);
+	// libera o espaco
+	delete[] matriz;
 	return 0;
 }
 
