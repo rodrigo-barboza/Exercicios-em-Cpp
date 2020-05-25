@@ -17,11 +17,18 @@
 		nomeLista.reverse	(); // inverte a ordem
 		nomeLista.clear 	(); // limpa toda lista
 		nomeLista.merge		(outraLista); // mescla nomeLista com outraLista e a outraLista fica vazia
+		nomeLista.resize	();	// redimensiona a lista
+		nomeLista.remove 	(valor); 
+		nomeLista.remove_if (funcao);
 	* metodos iterator
 		nomeIterator = nomeLista.begin(); // inicializa o iterator com a lista
 		advance (nomeIterator, posicao); // posiciona o iterator
 		nomeLista.insert(nomeIterator, valor); // insere onde o iterator esta posicionado o valor na lista
 		nomeLista.erase(nomeIterator); // remove elemento da posicao onde o iterator se encontra
+		nomeLista.assign (pos_it, valor);
+		nomeLista.emplace (pos_it, valor); // coloca na pos_it o valor
+		nomeLista.emplace_back (valor);
+		nomeLista.emplace_front (valor);
 */
 
 #include <iostream>

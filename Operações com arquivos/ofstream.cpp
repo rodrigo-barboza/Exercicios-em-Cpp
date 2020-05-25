@@ -28,8 +28,5 @@ int main (int argc, char **argv){
 	// após acabar de operar com o arquivo, fecha-se o arquivo para liberar a memória
 	arquivo.close();
 	
-	return 0;
+	return 0;	
 }
-
-
-

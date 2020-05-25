@@ -6,19 +6,22 @@
 		* nao preciso especificar o tamanho, posso, mas nao preciso
 			- especificando: vector <tipo> nomeVector(tamanho);
 		* metodos
-			nomeVector.push_back (valor);  		// insere no final de um vector um valor
-			nomeVector.size ();			   		// retorna o tamanho do vector
-			nomeVector.swap (nomeVector2); 		// troca os valores de nomeVector com os de nomeVector2
-			nomeVector.front ();		   		// retorna o primeiro elemento do vector
-			nomeVector.back ();			   		// retorna o ultimo elemento do vector
-			nomeVector.at (posicao);	   		// retorna um elemento de qualquer posicao do vector	
-			nomeVector.insert (posicao, valor); // insere em alguma posicao do vector o valor de valor
-			nomeVector.begin ();				// posicao inicial do vector
-			nomeVector.end ();					// posicao final do vector
-			nomeVector.erase (posicao);			// remove o elemento da posicao 
-			nomeVector.empty ();				// retorna false (se nao estiver vazio) e true (se estiver)
-			nomeVector.pop_back ();				// remove o ultimo elemento do vector			
-			nomeVector.clear ();				// limpar todos elementos do vector
+			nomeVector.push_back (valor);  				// insere no final de um vector um valor
+			nomeVector.size ();			   				// retorna o tamanho do vector
+			nomeVector.swap (nomeVector2); 				// troca os valores de nomeVector com os de nomeVector2
+			nomeVector.front ();		   				// retorna o primeiro elemento do vector
+			nomeVector.back ();			   				// retorna o ultimo elemento do vector
+			nomeVector.at (posicao);	   				// retorna um elemento de qualquer posicao do vector	
+			nomeVector.insert (posicao_it, valor); 		// insere em alguma posicao do vector o valor de valor
+			nomeVector.begin ();						// posicao inicial do vector
+			nomeVector.end ();							// posicao final do vector
+			nomeVector.erase (posicao_it);				// remove o elemento da posicao 
+			nomeVector.empty ();						// retorna false (se nao estiver vazio) e true (se estiver)
+			nomeVector.pop_back ();						// remove o ultimo elemento do vector			
+			nomeVector.clear ();						// limpar todos elementos do vector
+			nomeVector.capacity ();						// retorna a capacidade do vector
+			nomeVector.clear (quantidade_ele, valor); 	// atribui a certa quantidade o valor declarado
+			nomeVector.emplace (pos_it, valor);			// coloca na posicao o valor
 */
 #include <iostream>
 #include <vector> // para uso do vector
