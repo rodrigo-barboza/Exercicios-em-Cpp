@@ -1,6 +1,27 @@
 #include <iostream>
 #include <fstream>
 
+/*
+	in = entrada
+	out = saida
+	binary = modo binário
+	ate = abre para escrita e posiciona no final
+	app = append, abre para escrita sem deletar o conteudo atual, posiciona no final
+	trunc = truncate, abre para escrita e remove o conteúdo atual antes de abrir
+	
+	nomeArquivo.write ("string", len);
+	nomeArquivo.read (var_recebendo, len);
+	tellp = retorna a posição do ponteiro dentro do stream -> long pos = arquivo.tellp();
+	seekp = define a posição do ponteiro dentro do stream -> arquivo.seekp(pos-5);
+	
+	// constantes para definir a posição na stream
+	beg = arquivo.beg // posiciona no inicio 
+	cut = arquivo.cut 
+	end = arquivo.end // posiciona no final
+
+
+*/
+
 using namespace std;
 
 int main (int argc, char **argv){
@@ -12,6 +33,8 @@ int main (int argc, char **argv){
 	// abrir arquivo e especificar nome e tipo
 	// tipo out, app para adicionar no final do arquivo
 	// | ou bit a bit
+	
+	// arquivo.open ("nome2.txt", fstream::out | fstream::app);
 	arquivo.open("nome2.txt",ios::out|ios::app);
 	
 	while (toupper(op_code) == 'Y'){
